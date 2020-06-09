@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="navbar toolbar">
+  <div class="mr-4 mb-1" >
+    <button mat-icon-button *ngIf="menuIcon" (click)="onToggleSidenav()">
+      <mat-icon >menu</mat-icon>
+    </button>
+  </div>
+  <div class="mr-auto">
+    <h4 >Titre</h4>
+  </div>
+  <div class="menuRight">
+    <mat-form-field floatLabel="never">
+      <mat-label>Search</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <button mat-icon-button>
+    <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>settings</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

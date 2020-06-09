@@ -1,0 +1,25 @@
+div {
+  text-align: center;
+
+}
+.color {
+  background-color: rgba(248, 237, 228, 0.91);
+  width: 300px;
+  height: 400px;
+  border-radius: 30px;
+}
+.link {
+  color: gray;
+}
+.align {
+  margin-top: 100px;
+}
+.maticonsize {
+  margin-top: 50px;
+  height: 80px;
+  width: 150px;
+  font-size: 100px;
+}
+.btnsize{
+  width: 150px!important;
+}

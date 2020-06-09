@@ -1,0 +1,47 @@
+.align{
+  text-align: center;
+}
+.color {
+  background-color: rgba(248, 237, 228, 0.91);
+  padding: 20px 0;
+  border-radius: 30px;
+}
+.inscrire-size{
+  font-size: 250%!important;
+
+}
+.link {
+  color: gray;
+}
+
+.btnsize{
+  width: 200px!important;
+}
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .full-width{
+    margin-top: 10px!important;
+    width:450px !important;
+  }
+}
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  mat-form-field {
+    width:450px !important;
+  }
+}
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  mat-form-field {
+    width:350px !important;
+    padding-right: 50px!important;
+  }
+
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  mat-form-field {
+    width:350px !important;
+  }
+}
