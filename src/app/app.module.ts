@@ -21,6 +21,8 @@ import { NavComponent } from './website/navigation/nav/nav.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { StructureDERechercheComponent } from './website/pages/structure-derecherche/structure-derecherche.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DoctorantComponent } from './website/pages/doctorant/doctorant.component';
+import {DoctorantService} from './controller/service/doctorant.service';
 
 
 
@@ -40,7 +42,8 @@ import {HttpClientModule} from '@angular/common/http';
     LoginComponent,
     InscriptionComponent,
     NavComponent,
-    StructureDERechercheComponent
+    StructureDERechercheComponent,
+    DoctorantComponent
   ],
     imports: [
         BrowserModule,
@@ -51,7 +54,7 @@ import {HttpClientModule} from '@angular/common/http';
         ReactiveFormsModule,
 
     ],
-  providers: [],
+  providers: [DoctorantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
