@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "Gestionsoutenance"
+  "defaultProject": "Gestionsoutenance",
+  "cli": {
+    "analytics": false
+  }
 }

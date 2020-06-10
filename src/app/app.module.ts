@@ -19,6 +19,8 @@ import { LoginComponent } from './website/login/login.component';
 import { InscriptionComponent } from './website/inscription/inscription.component';
 import { NavComponent } from './website/navigation/nav/nav.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { StructureDERechercheComponent } from './website/pages/structure-derecherche/structure-derecherche.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -37,11 +39,13 @@ import {ReactiveFormsModule} from '@angular/forms';
     ProfileComponent,
     LoginComponent,
     InscriptionComponent,
-    NavComponent
+    NavComponent,
+    StructureDERechercheComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
+        HttpClientModule,
         BrowserAnimationsModule,
         MaterialsModule,
         ReactiveFormsModule,

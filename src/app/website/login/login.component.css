@@ -1,11 +1,12 @@
+
 div {
   text-align: center;
-
+  font-size: 20px;
 }
 .color {
   background-color: rgba(248, 237, 228, 0.91);
   width: 300px;
-  height: 400px;
+  height: 450px;
   border-radius: 30px;
 }
 .link {

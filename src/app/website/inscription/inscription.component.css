@@ -1,13 +1,19 @@
+
+
 .align{
   text-align: center;
+  font-size: 18px;
 }
 .color {
   background-color: rgba(248, 237, 228, 0.91);
-  padding: 20px 0;
+  padding: 5px ;
   border-radius: 30px;
+  margin-bottom: 40px;
 }
 .inscrire-size{
-  font-size: 250%!important;
+  margin-top: 20px;
+  font-size: 60px;
+  font-family: Arial;
 
 }
 .link {
@@ -16,6 +22,8 @@
 
 .btnsize{
   width: 200px!important;
+  font-family: Arial;
+  font-size: 18px;
 }
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {

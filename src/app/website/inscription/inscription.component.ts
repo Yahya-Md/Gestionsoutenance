@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import validate = WebAssembly.validate;
+import {StructureDeRechercheService} from '../../controller/service/structure-de-recherche.service';
+import {StructureDeRecherche} from '../../controller/model/structure-de-recherche.model';
 
 @Component({
   selector: 'app-inscription',
@@ -9,7 +11,7 @@ import validate = WebAssembly.validate;
 })
 export class InscriptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private structureDeRechercheService: StructureDeRechercheService) { }
   requiredFormControlnom = new FormControl('',[
     Validators.required,
   ]);
@@ -52,6 +54,10 @@ export class InscriptionComponent implements OnInit {
     Validators.pattern('valid'),
   ]);
   ngOnInit(): void {
+    this.structureDeRechercheService.findAll();
   }
 
+  get structures(): Array<StructureDeRecherche> {
+    return this.structureDeRechercheService.structures;
+  }
 }
