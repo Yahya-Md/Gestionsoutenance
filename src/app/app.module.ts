@@ -19,10 +19,11 @@ import { LoginComponent } from './website/login/login.component';
 import { InscriptionComponent } from './website/inscription/inscription.component';
 import { NavComponent } from './website/navigation/nav/nav.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { StructureDERechercheComponent } from './website/pages/structure-derecherche/structure-derecherche.component';
+import { StructureDERechercheComponent } from './dashboard/dashboard-admin/structure-derecherche/structure-derecherche.component';
 import {HttpClientModule} from '@angular/common/http';
-import { DoctorantComponent } from './website/pages/doctorant/doctorant.component';
 import {DoctorantService} from './controller/service/doctorant.service';
+import { EtablissementComponent } from './dashboard/dashboard-admin/dash-etablissement/etablissement.component';
+import { ListEtablissementComponent } from './dashboard/dashboard-admin/dash-etablissement/list-etablissement/list-etablissement.component';
 
 
 
@@ -43,7 +44,8 @@ import {DoctorantService} from './controller/service/doctorant.service';
     InscriptionComponent,
     NavComponent,
     StructureDERechercheComponent,
-    DoctorantComponent
+    EtablissementComponent,
+    ListEtablissementComponent
   ],
     imports: [
         BrowserModule,

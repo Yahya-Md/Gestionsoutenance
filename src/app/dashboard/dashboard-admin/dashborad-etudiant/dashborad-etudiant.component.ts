@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DoctorantService} from '../../../controller/service/doctorant.service';
+import {Doctorant} from '../../../controller/model/doctorant.model';
 
 @Component({
   selector: 'app-dashborad-etudiant',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashborad-etudiant.component.css']
 })
 export class DashboradEtudiantComponent implements OnInit {
-
-  constructor() { }
+  constructor(private doctorantService: DoctorantService) { }
 
   ngOnInit(): void {
+    this.doctorantService.findAll();
+    // this.dataSource.sort = this.sort;
+    // this.dataSource.paginator = this.paginator;
+    // console.log(this.data);
+    // console.log(this.doctorantService.findAll());
+  }
+
+  get doctorants(): Array<Doctorant> {
+    return this.doctorantService.doctorants;
   }
 
 }

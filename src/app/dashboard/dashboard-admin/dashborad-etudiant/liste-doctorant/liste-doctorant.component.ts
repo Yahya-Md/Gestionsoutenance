@@ -15,8 +15,7 @@ import {catchError, map, startWith, switchMap} from 'rxjs/operators';
 })
 export class ListeDoctorantComponent implements OnInit {
   displayedColumns: string[] = ['cin', 'cne', 'tel', 'email'];
-  data: Doctorant [] = [];
-
+  dataSource = new MatTableDataSource(this.doctorants);
   resultsLength = 0;
   isLoadingResults = true;
   isRateLimitReached = false;
@@ -29,10 +28,8 @@ export class ListeDoctorantComponent implements OnInit {
 
   ngOnInit(): void {
     this.doctorantService.findAll();
-    // this.dataSource.sort = this.sort;
-    // this.dataSource.paginator = this.paginator;
-    // console.log(this.data);
-    console.log(this.doctorantService.findAll());
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 
   get doctorants(): Array<Doctorant> {

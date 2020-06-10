@@ -9,6 +9,7 @@ import {ListeDoctorantComponent} from './dashboard/dashboard-admin/dashborad-etu
 import {DashboardUserComponent} from './dashboard/dashboard-admin/dashboard-user/dashboard-user.component';
 import {LoginComponent} from './website/login/login.component';
 import {InscriptionComponent} from './website/inscription/inscription.component';
+import {EtablissementComponent} from './dashboard/dashboard-admin/dash-etablissement/etablissement.component';
 
 
 const routes: Routes = [
@@ -34,16 +35,6 @@ const routes: Routes = [
                 },
                 { path : 'espace-doctorant',
                   component: DashboradEtudiantComponent,
-                                children: [
-                                  { path : '',
-                                    redirectTo : 'list-doctorant',
-                                    pathMatch: 'full'
-                                  },
-                                  {
-                                  path : 'list-doctorant',
-                                  component: ListeDoctorantComponent,
-                                }
-                                ]
                 },
                 { path : 'espace-prof',
                   component: DashboradProfesseurComponent,
@@ -53,6 +44,9 @@ const routes: Routes = [
                 },
                 { path : 'espace-user',
                   component: DashboardUserComponent,
+                },
+                { path : 'espace-etablissement',
+                  component: EtablissementComponent,
                 },
               ]
   }
