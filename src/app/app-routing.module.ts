@@ -10,6 +10,7 @@ import {DashboardUserComponent} from './dashboard/dashboard-admin/dashboard-user
 import {LoginComponent} from './website/login/login.component';
 import {InscriptionComponent} from './website/inscription/inscription.component';
 import {EtablissementComponent} from './dashboard/dashboard-admin/dash-etablissement/etablissement.component';
+import {AjoutEtablissementComponent} from './dashboard/dashboard-admin/dash-etablissement/ajout-etablissement/ajout-etablissement.component';
 
 
 const routes: Routes = [

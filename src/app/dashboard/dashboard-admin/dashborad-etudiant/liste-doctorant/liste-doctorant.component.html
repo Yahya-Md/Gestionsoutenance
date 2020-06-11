@@ -2,11 +2,11 @@
 
 <div class="container">
  <mat-form-field>
-   <input  matInput placeholder="Filter">
+   <input  matInput placeholder="Filter" (keyup)="applyFilter($event.target.value)" >
  </mat-form-field>
 </div>
 <div class="container">
- <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+ <table mat-table  [dataSource]="doctorants" matSort class="mat-elevation-z8">
 
    <!--- Note that these columns can be defined in any order.
          The actual rendered columns are set as a property on the row definition" -->

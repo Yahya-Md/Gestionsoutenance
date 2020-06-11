@@ -24,6 +24,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {DoctorantService} from './controller/service/doctorant.service';
 import { EtablissementComponent } from './dashboard/dashboard-admin/dash-etablissement/etablissement.component';
 import { ListEtablissementComponent } from './dashboard/dashboard-admin/dash-etablissement/list-etablissement/list-etablissement.component';
+import { AjoutEtablissementComponent } from './dashboard/dashboard-admin/dash-etablissement/ajout-etablissement/ajout-etablissement.component';
 
 
 
@@ -45,7 +46,8 @@ import { ListEtablissementComponent } from './dashboard/dashboard-admin/dash-eta
     NavComponent,
     StructureDERechercheComponent,
     EtablissementComponent,
-    ListEtablissementComponent
+    ListEtablissementComponent,
+    AjoutEtablissementComponent
   ],
     imports: [
         BrowserModule,

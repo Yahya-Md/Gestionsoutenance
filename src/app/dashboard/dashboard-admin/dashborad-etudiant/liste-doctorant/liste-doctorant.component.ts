@@ -6,6 +6,7 @@ import {DoctorantService} from '../../../../controller/service/doctorant.service
 import {Doctorant} from '../../../../controller/model/doctorant.model';
 import {merge, Observable, of as observableOf} from 'rxjs';
 import {catchError, map, startWith, switchMap} from 'rxjs/operators';
+import {Etablissement} from '../../../../controller/model/etablissement.model';
 
 
 @Component({
@@ -22,17 +23,19 @@ export class ListeDoctorantComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
    applyFilter(filterValue: string){
-  //  this.data.filter = filterValue.trim().toLowerCase();
+    this.dataSource.filter = filterValue.trim().toLowerCase();
  }
-  constructor(private doctorantService: DoctorantService) { }
-
+  constructor(private doctorantService: DoctorantService) {
+     this.dataSource = new MatTableDataSource(this.doctorants);
+  }
   ngOnInit(): void {
-    this.doctorantService.findAll();
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
+     this.dataSource = new MatTableDataSource(this.doctorants);
+     this.doctorantService.findAll();
+     this.dataSource.sort = this.sort;
+     this.dataSource.paginator = this.paginator;
   }
 
-  get doctorants(): Array<Doctorant> {
+  get doctorants(): Array<Doctorant>  {
     return this.doctorantService.doctorants;
   }
 /*
